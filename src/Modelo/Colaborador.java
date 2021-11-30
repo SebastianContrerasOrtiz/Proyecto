@@ -68,7 +68,7 @@ public class Colaborador {
 
     public void setSueldo(int sueldo) {
         this.sueldo = sueldo;
-    } hola
+    } 
     
     
     
