@@ -29,8 +29,11 @@ public class Menu extends javax.swing.JFrame {
     private void initComponents() {
 
         jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
+        jmi_eliminar = new javax.swing.JMenuItem();
+        jmi_agregar = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jmi_calculadora = new javax.swing.JMenuItem();
         jmi_imc = new javax.swing.JMenuItem();
@@ -39,9 +42,28 @@ public class Menu extends javax.swing.JFrame {
 
         jMenuItem1.setText("jMenuItem1");
 
+        jMenuItem2.setText("jMenuItem2");
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jMenu1.setText("Seleccione");
+
+        jmi_eliminar.setText("Eliminar");
+        jmi_eliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmi_eliminarActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jmi_eliminar);
+
+        jmi_agregar.setText("Agregar");
+        jmi_agregar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmi_agregarActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jmi_agregar);
+
         jMenuBar1.add(jMenu1);
 
         jMenu2.setText("Otros");
@@ -103,6 +125,14 @@ public class Menu extends javax.swing.JFrame {
          new Calculadora().setVisible(true);
     }//GEN-LAST:event_jmi_calculadoraActionPerformed
 
+    private void jmi_eliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_eliminarActionPerformed
+        new Eliminar().setVisible(true);
+    }//GEN-LAST:event_jmi_eliminarActionPerformed
+
+    private void jmi_agregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_agregarActionPerformed
+        new Agregar().setVisible(true);
+    }//GEN-LAST:event_jmi_agregarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -143,8 +173,11 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JPopupMenu.Separator jSeparator1;
+    private javax.swing.JMenuItem jmi_agregar;
     private javax.swing.JMenuItem jmi_calculadora;
+    private javax.swing.JMenuItem jmi_eliminar;
     private javax.swing.JMenuItem jmi_imc;
     private javax.swing.JMenuItem jmi_salir;
     // End of variables declaration//GEN-END:variables
