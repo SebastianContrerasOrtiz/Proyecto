@@ -34,7 +34,8 @@ public class Eliminar extends javax.swing.JFrame {
         jbtn_Eliminar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Eliminar");
 
         jbtn_Eliminar.setText("Eliminar");
         jbtn_Eliminar.addActionListener(new java.awt.event.ActionListener() {
@@ -81,6 +82,7 @@ public class Eliminar extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbtn_EliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_EliminarActionPerformed

@@ -47,7 +47,8 @@ public class Agregar extends javax.swing.JFrame {
         jbtn_salir = new javax.swing.JButton();
         jchk_colaborador = new javax.swing.JCheckBox();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Agregar ");
 
         jLabel1.setText("Nombre");
 
@@ -150,6 +151,7 @@ public class Agregar extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbtn_salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_salirActionPerformed
