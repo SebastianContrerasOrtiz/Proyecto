@@ -6,6 +6,7 @@ package Vista;
 
 import Controlador.Registro;
 import Modelo.Colaborador;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.swing.JOptionPane;
 
@@ -40,7 +41,6 @@ public class Agregar extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jtxt_sueldo = new javax.swing.JTextField();
         jbtn_enviar = new javax.swing.JButton();
@@ -48,16 +48,6 @@ public class Agregar extends javax.swing.JFrame {
         jchk_colaborador = new javax.swing.JCheckBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        jtxt_nombre.setText("jTextField1");
-
-        jtxt_apellido.setText("jTextField2");
-
-        jtxt_dia.setText("jTextField3");
-
-        jtxt_mes.setText("jTextField4");
-
-        jtxt_ano.setText("jTextField5");
 
         jLabel1.setText("Nombre");
 
@@ -67,11 +57,7 @@ public class Agregar extends javax.swing.JFrame {
 
         jLabel4.setText("Agregar colaborador");
 
-        jLabel5.setText("jLabel5");
-
         jLabel6.setText("Sueldo");
-
-        jtxt_sueldo.setText("jTextField1");
 
         jbtn_enviar.setText("Enviar");
         jbtn_enviar.addActionListener(new java.awt.event.ActionListener() {
@@ -103,41 +89,38 @@ public class Agregar extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(24, 24, 24)
-                        .addComponent(jtxt_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(192, 192, 192)
-                        .addComponent(jLabel5))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jtxt_apellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel6)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jtxt_sueldo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jtxt_sueldo, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel4)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jchk_colaborador))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addComponent(jLabel3)
-                                .addGap(4, 4, 4)
-                                .addComponent(jtxt_dia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jtxt_mes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jtxt_ano, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(184, Short.MAX_VALUE))
+                                .addComponent(jchk_colaborador)
+                                .addGap(28, 28, 28))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jtxt_dia)
+                                .addGap(18, 18, 18)
+                                .addComponent(jtxt_mes, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)))
+                        .addComponent(jtxt_ano, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel2))
+                        .addGap(24, 24, 24)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jtxt_apellido, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jtxt_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(252, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel5)
-                .addGap(76, 76, 76)
+                .addGap(101, 101, 101)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jtxt_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1))
@@ -177,9 +160,9 @@ public class Agregar extends javax.swing.JFrame {
         int codigotrabajador;
         String nombre;
         String apellido;
-        Date fechaingreso;
+        Date fechaingreso = null;
         int sueldo;
- 
+        
         
         nombre = this.jtxt_nombre.getText();
         if (nombre.isEmpty()) {  //para que no este vacio
@@ -197,9 +180,10 @@ public class Agregar extends javax.swing.JFrame {
        
         }
         
-        dia = this.jtxt_dia.getText();
-        mes = this.jtxt_mes.getText();
-        ano = this.jtxt_ano.getText();
+       
+        String dia = this.jtxt_dia.getText();
+        String mes = this.jtxt_mes.getText();
+        String ano = this.jtxt_ano.getText();
         
          if (dia.isEmpty()|| mes.isEmpty()||ano.isEmpty()){
             JOptionPane.showMessageDialog(this,"Ingrese fecha", "Validacion", 2);
@@ -208,10 +192,10 @@ public class Agregar extends javax.swing.JFrame {
        
         }
         
-         fechaStr = dia+"/"+mes+"/"+ano;
+        String fechaStr = dia+"/"+mes+"/"+ano;
          SimpleDateFormat formato = new SimpleDateFormat("dd/mm/yyyy");
          try {
-            fecha = formato.parse(fechaStr);
+            Date fecha = formato.parse(fechaStr);
         } catch (Exception e){ 
             JOptionPane.showMessageDialog(this,"Ingrese fecha de formato dd/mm/yyy", "Validacion", 2);
             this.jtxt_dia.requestFocus();
@@ -227,12 +211,12 @@ public class Agregar extends javax.swing.JFrame {
         }
          
          
-         colab = this.jchk_colaborador.isSelected();
+        boolean colab = this.jchk_colaborador.isSelected();
          
-         Colaborador colaborador = new Colaborador(0,nombre,apellido,fechaingreso,sueldo); //0 es el id
+         Colaborador colaborador = new Colaborador(0, nombre, apellido, fechaingreso, sueldo); //0 es el id
          
          Registro reg = new Registro();
-         if (reg. buscarPorCodigoTrabajador(reg.buscarTodos(), titulo)==false) {
+         if (reg. buscarPorCodigoTrabajador(reg.buscarTodos(), 0)==false) {
             
         
          
@@ -292,7 +276,6 @@ public class Agregar extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JButton jbtn_enviar;
     private javax.swing.JButton jbtn_salir;

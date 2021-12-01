@@ -26,8 +26,8 @@ public class Registro {
         Date date = null;
         
         try {
-            Conexion con = new Conexion();
-            Connection cnt = con.obtenerConexion();
+            Conexion con = new Conexion();//objeto coleccion
+            Connection cnt = con.obtenerConexion();//conexion lista
             
             String query = "INSERT INTO colaborador(nombre,apellido,fechaingreso,sueldo) VALUES (?,?,?,?)";
             PreparedStatement pst = cnt.prepareStatement(query); //capturas los elementos
@@ -36,9 +36,9 @@ public class Registro {
             pst.setDate(3, new java.sql.Date(date.getTime()));
             pst.setInt(4, colaborador.getSueldo());
             
-            pst.executeUpdate();
-            pst.close();
-            cnt.close();
+            pst.executeUpdate();//ejecuta consulta
+            pst.close();//cierra consulta
+            cnt.close();//cierra conexion
             return true;
             
         } catch (SQLException e) {
@@ -178,5 +178,9 @@ public class Registro {
         return lista;
         
         
+    }
+
+    public boolean buscarPorCodigoTrabajador(List<Colaborador> buscarTodos, int codigotrabajador) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
